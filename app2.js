@@ -6,10 +6,10 @@ list.addEventListener('click', function(e) {
     list.removeChild(li);
   }
 });
-//  add book list
+//  add books
 const addForm = document.forms["add-book"];
 addForm.addEventListener('submit', function(e) {
-  e.preventDefault()
+  e.preventDefault();
   const value = addForm.querySelector('input[type= "text"]').value;
   console.log(value);
 
@@ -31,4 +31,18 @@ addForm.addEventListener('submit', function(e) {
   li.appendChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
+});
+
+//hide books
+
+const hideBox = document.querySelector('#hide');
+
+hideBox.addEventListener('change', function(e){
+  if (hideBox.checked){
+    list.style.display = 'none';
+  } else {
+    list.style.display = 'initial';
+
+  }
+
 });
