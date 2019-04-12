@@ -9,7 +9,7 @@ list.addEventListener('click', function(e) {
 //  add book list
 const addForm = document.forms["add-book"];
 addForm.addEventListener('submit', function(e) {
-  e.preventDefault();
+  e.preventDefault()
   const value = addForm.querySelector('input[type= "text"]').value;
   console.log(value);
 
@@ -21,6 +21,11 @@ addForm.addEventListener('submit', function(e) {
   //add content
   deleteBtn.textContent = 'delete';
   bookName.textContent = value;
+
+
+  //add classes
+  bookName.classList.add('name');
+  deleteBtn.classList.add('delete');
 
   // append to document
   li.appendChild(bookName);
