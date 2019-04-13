@@ -1,4 +1,3 @@
-document.addEventListener('DOMContentLoaded', function(){
   const list = document.querySelector('#book-list ul');
   // delete books
   list.addEventListener('click', function(e){
@@ -77,4 +76,4 @@ document.addEventListener('DOMContentLoaded', function(){
       });
     }
   });
-});
+
