@@ -1,9 +1,10 @@
+document.addEventListener('DOMContentLoaded', function(){
   const list = document.querySelector('#book-list ul');
   // delete books
   list.addEventListener('click', function(e){
     if (e.target.className == 'delete'){
       const li = e.target.parentElement;
-      list.removeChild(li);
+      list.removeChild(li)
     }
   });
   //add books
@@ -12,7 +13,7 @@
 
   addForm.addEventListener('submit', function(e){
     e.preventDefault();
-    const value = addForm.querySelector('input[type= "text"]').value;
+    const value = addForm.querySelector('input[type= "text"]').value
 
 
     // create elements
@@ -33,7 +34,7 @@
   li.appendChild(bookName);
   li.appendChild(deleteBtn);
   list.appendChild(li);
-  });
+  })
 
 
   // hide books
@@ -44,7 +45,7 @@
     } else {
       list.style.display = "initial";
     }
-  });
+  })
 
   //filter books
   const searchBar = document.forms['search-books'].querySelector('input');
@@ -58,8 +59,8 @@
       } else {
         book.style.display = 'none';
       }
-    });
-  });
+    })
+  })
 
   //tabbed contenet
   const tabs = document.querySelector('.tabs');
@@ -73,7 +74,8 @@
         } else {
           panel.classList.remove('active');
         }
-      });
+      })
     }
-  });
+  })
+})
 
